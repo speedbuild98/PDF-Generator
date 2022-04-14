@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+      <html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Informe Mantenimiento Aire Acondicionado</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel=StyleSheet href="style.css" title="Contemporaneo">
+	</head>
+	<body>
+            <!--=======================NAV=======================-->
+            <div id="invoice">
+		 <nav>
+                  <div class="cuadrado">
+                        <h2 class="">X</h2>
+                        <p class="documento">Documento<BR>no válido<BR>como factura</p>
+                  </div>
+                  <div class="titulo-container">
+                  <h1 class="titulo">INFORME MANTENIMIENTO<BR>AIRE ACONDICIONADO</h1>
+                  </div>
+                  <div class="logo">
+                        <img src="http://www.proima.com.ar/wp-content/uploads/2019/10/logo.png" alt="Logo Proima" class="logopng">
+                        <p class="proyecto">PROYECTO - INSTALACIÓN - MANTENIMIENTO</p>
+                  </div>
+             </nav>
+
+            <!--=======================Tabla principal=======================-->
+            <div class="tabla1">
+                  <div class="tabla-cliente">
+                        <form>
+                              <label for="fname">Cliente / Sitio:</label>
+                              <input type="text" id="fname" name="fname"><br>
+                              <label for="fname">Razón social:</label>
+                              <input type="text" id="fname" name="fname"><br>
+                              <label for="fname">Dirección:</label>
+                              <input type="text" id="fname" name="fname"><br>
+                              <label for="fname">Te:</label>
+                              <input type="text" id="fname" name="fname">
+                        </form>
+                  </div>
+                 
+                   <div class="a">
+                        <form>
+                        <label for="fname">USO INTERNO - CHILLER:</label>
+                        <select type="text" id="fname" name="fname"><option>I</option><option>II</option></select>                       
+                   </div>
+                   <div class="tabla-chiller">
+                   <div class="b">
+                        <label for="fname">Fecha inicio:</label>
+                        <input type="date" id="fname" name="fname"><br>
+                        <label for="fname">Hs.Trabajo:</label>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="fname">Nº Técnicos:</label>
+                        <input type="text" id="fname" name="fname">
+                   </div>
+                   <div class="c">
+                        <label for="fname">Fecha fin:</label>
+                        <input type="date" id="fname" name="fname"><br>
+                        <label for="fname">Hs. Viaje:</label>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="fname">Obra Nº:</label>
+                        <input type="text" id="fname" name="fname">
+                   </div>
+                  </form></div>
+            </div>
+      </div>
+            <!--=======================FOOTER=======================-->
+             <footer><button class="button-19" onclick="generatePDF()">Descargar PDF</button></footer>
+            <!--=======================JAVASCRIPT=======================-->
+            <script src="html2pdf.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+			function generatePDF() {
+				// Choose the element that our invoice is rendered in.
+				const element = document.getElementById('invoice');
+				// Choose the element and save the PDF for our user.
+				html2pdf().from(element).save();
+			}
+		</script>
+	</body>
+</html>
+

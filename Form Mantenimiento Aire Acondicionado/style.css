@@ -1,0 +1,249 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+
+    /*========== Colores ==========*/
+    --hue-color: 200; 
+
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 100%, 40%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+    /*========== fuente ==========*/
+    --body-font: 'Poppins', sans-serif;
+
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  background-color: lightblue;
+}
+.invoice{
+  margin: 10px;
+}
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*==================== NAV ====================*/
+nav{
+  display: flex;
+  text-align: center;
+  border-bottom: 2px solid #00000044;
+}
+
+.cuadrado{
+  width: 10vw;
+  height:12vw;
+  border: 2px solid black;
+  color: black;
+  font-size: .5em;
+  text-align:center;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 20px;
+}
+.cuadrado h2{
+  font-size: 30px;
+  font-weight: bolder;
+}
+.cuadrado p{
+  margin-top: 10px;
+  line-height: 7px;
+}
+
+.cuadrado img{
+  border: 2px solid red;
+}
+.titulo-container{
+  text-align: center;
+  margin:30px auto;
+}
+
+.titulo{
+    font-size: 3vw;  
+}
+.logo{
+  text-align: center;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.logo img{
+  width: 90px;
+}
+.proyecto{
+  color: black;
+  font-size: 5px;
+  font-weight: bold;
+  margin-bottom:40px;
+}
+/*==================== Tablas principales ====================*/
+.tabla1{
+  border: 2px solid yellow;
+  display:grid;
+  grid-template-columns: 1fr 1fr;  
+  grid-template-rows: 1fr;
+}
+.tabla-cliente{
+  border: 2px solid blue;
+}
+
+.tabla-chiller{
+  border: 2px solid blue;
+  display:grid;
+  grid-template-columns: 1fr 1fr;  
+  grid-template-rows: 4fr;
+}
+
+.b{
+  border: 2px solid red;
+}
+.c{
+  border: 2px solid green;
+}
+
+/*==================== FOOTER ====================*/                     
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  margin: auto;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
