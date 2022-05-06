@@ -124,23 +124,11 @@ nav{
 .titulo img{
   margin-top:20px;
   filter: drop-shadow(-2px 2px 5px white);
-  animation: brillo 2s infinite;
-}
-
-@keyframes brillo {
-  0% {
-    filter: drop-shadow(-2px 2px 5px var(white));
-  }
-  50% {
-    filter: drop-shadow(-2px 2px 20px var(white));
-  }
-  100% {
-    filter: drop-shadow(-2px 2px 5px var(white));
-  }
 }
 
 .titulo{
   font-weight: bold !important;
+  filter: drop-shadow(-2px 2px 5px white);
 }
 
 .titulo h1, .tablaNav{
