@@ -81,7 +81,6 @@ html {
 
 body {
   margin: 0 0 var(--header-height) 0;
-  background-color: #8ecae6!important;
   font-family:'Roboto', sans-serif!important;
 }
 
@@ -99,8 +98,8 @@ body p{
   text-transform: uppercase;
   font-weight: 500;
 }
-.invoice{
-  margin: 10px 0 10px;
+#invoice{
+  background-color:#8ecae6;
 }
 
 ul {
