@@ -70,7 +70,6 @@
 
 /*==================== BASE ====================*/
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -82,17 +81,12 @@ html {
 body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  color: var(--text-color);
   background-color: lightblue;
 }
+
 .invoice{
   margin: 10px;
-}
-h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
 }
 
 ul {
@@ -103,147 +97,8 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
 /*==================== NAV ====================*/
-nav{
-  display: flex;
-  text-align: center;
-  border-bottom: 2px solid #00000044;
-}
 
-.cuadrado{
-  width: 10vw;
-  height:12vw;
-  border: 2px solid black;
-  color: black;
-  font-size: .5em;
-  text-align:center;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: 20px;
-}
-.cuadrado h2{
-  font-size: 30px;
-  font-weight: bolder;
-}
-.cuadrado p{
-  margin-top: 10px;
-  line-height: 7px;
-}
-
-.cuadrado img{
-  border: 2px solid red;
-}
-.titulo-container{
-  text-align: center;
-  margin:30px auto;
-}
-
-.titulo{
-    font-size: 3vw;  
-}
-.logo{
-  text-align: center;
-  margin-left: auto;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-.logo img{
-  width: 90px;
-}
-.proyecto{
-  color: black;
-  font-size: 5px;
-  font-weight: bold;
-  margin-bottom:40px;
-}
 /*==================== Tablas principales ====================*/
-.tabla1{
-  border: 2px solid yellow;
-  display:grid;
-  grid-template-columns: 1fr 1fr;  
-  grid-template-rows: 1fr;
-}
-.tabla-cliente{
-  border: 2px solid blue;
-}
-
-.tabla-chiller{
-  border: 2px solid blue;
-  display:grid;
-  grid-template-columns: 1fr 1fr;  
-  grid-template-rows: 4fr;
-}
-
-.b{
-  border: 2px solid red;
-}
-.c{
-  border: 2px solid green;
-}
 
 /*==================== FOOTER ====================*/                     
-footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-19 {
-  appearance: button;
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-family: din-round,sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  white-space: nowrap;
-  margin: auto;
-}
-
-.button-19:after {
-  background-clip: padding-box;
-  background-color: #1CB0F6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.button-19:main,
-.button-19:focus {
-  user-select: auto;
-}
-
-.button-19:hover:not(:disabled) {
-  filter: brightness(1.1);
-}
-
-.button-19:disabled {
-  cursor: auto;
-}
