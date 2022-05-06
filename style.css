@@ -106,9 +106,19 @@ nav{
   font-weight: bold;
 }
 
-
-nav img, h1{
+.titulo img{
   filter: drop-shadow(0px 3px 0px #ffffff);
+}
+
+.titulo{
+  font-weight: bold !important;
+}
+
+.titulo h1{
+  margin-top:15px;
+  color:#ffffff;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 20px;
 }
 
 .divHeader{
