@@ -122,7 +122,7 @@ nav{
 }
 
 .titulo img{
-  filter: drop-shadow(0px 3px 0px #ffffff);
+  margin-top:20px;
 }
 
 .titulo{
@@ -132,7 +132,6 @@ nav{
 .titulo h1, .tablaNav{
   margin-top:15px;
   margin-bottom: 20px;
-  text-decoration: underline;
   text-transform: uppercase;
   font-weight: bolder;
 }
