@@ -1,5 +1,6 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -80,9 +81,8 @@ html {
 
 body {
   margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  background-color: var(--body-color);
-  background-color: lightblue;
+  background-color: #8ecae6!important;
+  font-family:'Roboto', sans-serif!important;
 }
 
 .invoice{
@@ -98,7 +98,36 @@ a {
 }
 
 /*==================== NAV ====================*/
+nav{
+  border:1px solid red;
+  display:flex;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+}
 
+
+nav img, h1{
+  filter: drop-shadow(0px 3px 0px #ffffff);
+}
+
+.divHeader{
+  border: 1px solid red;
+  align-items: center;
+  text-align: center;
+}
+
+.divMain{
+  border: 1px solid greenyellow;
+  align-items: center;
+  text-align: center;
+}
+
+.medicionesDiv{
+  border: 1px solid blue;
+  align-items: center;
+  text-align: center;
+}
 /*==================== Tablas principales ====================*/
 
 /*==================== FOOTER ====================*/                     
