@@ -85,8 +85,22 @@ body {
   font-family:'Roboto', sans-serif!important;
 }
 
+body input{
+  border: none;
+  margin: 5px 0 5px;
+  text-align: center;
+  border-radius: 7px;
+  font-weight: bolder;
+  color:#0f0f0f;
+  text-transform: uppercase;
+}
+body p{
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .invoice{
-  margin: 10px;
+  margin: 10px 0 10px;
 }
 
 ul {
@@ -99,11 +113,12 @@ a {
 
 /*==================== NAV ====================*/
 nav{
-  border:1px solid red;
+  border-bottom:10px solid #00000050;
   display:flex;
   align-items: center;
   text-align: center;
   font-weight: bold;
+  padding-bottom: 15px;
 }
 
 .titulo img{
@@ -114,15 +129,28 @@ nav{
   font-weight: bold !important;
 }
 
-.titulo h1{
+.titulo h1, .tablaNav{
   margin-top:15px;
-  color:#ffffff;
-  text-shadow: 2px 2px 4px black;
   margin-bottom: 20px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 
+.tablaNav input{
+  width: 100%;
+
+}
+.titulo input{
+  border: none;
+  margin: 5px 0 5px;
+}
+.tablaHeader{
+  margin: 20px 0px 20px;
+  padding-bottom: 15px;
+  border-bottom:10px solid #00000030;
+}
 .divHeader{
-  border: 1px solid red;
   align-items: center;
   text-align: center;
 }
