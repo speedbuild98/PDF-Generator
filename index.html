@@ -25,9 +25,9 @@
                   <input class="uso-interno" id="obra" type="text">
             <!--Cliente/Sitio-->
                   <select required name="cliente" id="cliente">
-                        <option value="Renault">Renault</option>
-                        <option value="Gestamp">Gestamp</option>
-                        <option value="UNC">UNC</option>
+                        <option value="LOCAL 1">LOCAL 1</option>
+                        <option value="LOCAL 5">LOCAL 5</option>
+                        <option value="LOCAL 9">LOCAL 9</option>
                       </select>
             <!--Razón social-->
                   <input class="razon" type="text" id="social">
@@ -56,8 +56,19 @@
                         <input type="text" class="r2">
                         <input type="text" class="r3">
                   </div> 
-            </div>  
+            </div>
+            <!--Firmas-->
+                        <input type="text" class="r1">
+            <!--Firmas-->
+                  <br>
+                  <img src="/firmas/firma-1.png" alt="firmas" class="firmas">
       </main>
+      <select name="select" id="select">
+            <option value="1">Pepe</option>
+            <option value="2">Juan</option>
+            <option value="3">Lauta</option>
+            <option value="4">Leonel</option>
+        </select>
             <!--=======================BUTTON=======================-->
             <button class="buttonPDF button" onclick="generatePDF()"><i class="uil uil-save"></i>Guardar</button>
             <!--=======================JAVASCRIPT=======================-->
@@ -72,7 +83,7 @@
                   var opt = {
                   margin:       0,
                   filename:     sucursal + " " + fecha ,
-                  image:        { type: 'png' },
+                  image:        { type: 'jpeg', quality: 1 },
                   jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
                   };
 				// Choose the element that our invoice is rendered in.
@@ -80,6 +91,13 @@
                         // New Promise-based usage:
                         html2pdf().set(opt).from(element).save();
 			}
+
+                  const $select = document.getElementById('select');
+                  const $image = document.querySelector('.firmas');
+
+                  $select.addEventListener('change', () => {
+                  $image.setAttribute('src', `/firmas/firma-${$select.value}.png`);
+                  });
 		</script>
 	</body>
 </html>
