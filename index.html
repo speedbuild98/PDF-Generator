@@ -5,242 +5,80 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="theme-color" content="#0088CC" />
-		<title>Informe Mantenimiento Aire Acondicionado</title>
+		<title>Informe Mantenimiento Aire Acondicionado - Renault</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link rel=StyleSheet href="style.css" title="Contemporaneo">
-              <!-- Bootstrap CSS -->
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+            <link rel=StyleSheet href="style.css">
+            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-      <div id="invoice">
-            <!--========================NAV=========================-->
-		 <nav class="container">
-                  <div class="titulo">
-                  <img src="/logo.png">
-                  <h1 class="h4">
-                        AUDITORIA EN SISTEMAS DE A.A.
-                  </h1>
-
-                  <form action="" class="tablaNav">
-                        Fecha<br><input placeholder="dd-mm-aaaa" type="number"><br>                 
-                        Edificio<br><input type="text"><br>
-                        Auditores<br><input type="text"><br>
-                  </form>
+            <!--========================MAIN=========================-->
+      <main id="invoice">
+            <!--Uso interno-->
+                  <input class="uso-interno" id="fecha" type="date">
+                  <input class="uso-interno" id="fechafin" type="date">
+                  <input class="uso-interno" id="hs-trabajo" type="number">
+                  <input class="uso-interno" id="hs-viaje" type="number">
+                  <input class="uso-interno" id="tecnicos" type="number">
+                  <input class="uso-interno" id="obra" type="text">
+            <!--Cliente/Sitio-->
+                  <select required name="cliente" id="cliente">
+                        <option value="Renault">Renault</option>
+                        <option value="Gestamp">Gestamp</option>
+                        <option value="UNC">UNC</option>
+                      </select>
+            <!--Razón social-->
+                  <input class="razon" type="text" id="social">
+                  <input class="razon" type="text" id="direccion">
+                  <input class="razon" type="number" id="te">
+            <!--Equipo-->
+                  <input type="text" class="equipo" id="equipo">
+                  <input type="text" class="equipo" id="marca">
+                  <input type="text" class="equipo" id="modelo">
+                  <input type="text" class="equipo" id="serie">
+            <!--Compresores-->
+            <!--Consumo-->
+            <div class="consumo">
+                  <div class="consumo-caja consumo-caja1">
+                        <input type="text" class="r1">
+                        <input type="text" class="r2">
+                        <input type="text" class="r3">
                   </div>
-             </nav>
-            <!--==================Tabla principal===================-->
-             <main class="container tablaPrincipal">
-                  <div class="tablas">
-                        <div class="container divHeader">
-                        <form action="" class="tablaHeader">
-                              <p>Tipo de equipo</p>
-                              <input type="text">
-                              <p>Sector</p>
-                              <input type="text">
-                              <p>Id Equipo</p>
-                              <input type="text">
-                              <p>Marca</p>
-                              <input type="text">
-                              <p>Sala</p>
-                              <input type="text">
-                              <p>Modelo</p>
-                              <input type="text">
-                              <p>Nº Serie</p>
-                              <input type="text">
-                              <p>Capacidad</p>
-                              <input placeholder="Kcal/h" type="text"><br>                              
-                        </form>
-                        </div>
-                        <div class="divMain">
-                              <h4>RUTINAS DE AUDICIÓN EN EQUIPOS DE AIRE ACONDICIONADO</h4>
-                              <form action="" class="tablaMain">
-                                <p>1)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>2)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>3)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>4)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>5)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>6)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>7)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>8)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>9)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>                                                                                    
-                                <p>10)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>11)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>12)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>13)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>
-                                <p>14)Estado y limpieza de filtros de aire:</p>
-                                    <input type="radio" id="Bien">
-                                    <label for="bien">Bien</label>
-                                    <input type="radio" id="regular">
-                                    <label for="regular">Regular</label>
-                                    <input type="radio" id="Mal">
-                                    <label for="mal">Mal</label>
-                                    <input type="radio" id="mal">
-                                    <label for="javascript">No aplica</label>                                           
-                              </form>
-                        </div>
-                        <div class="medicionesDiv">
-                        <div class="container mediciones">
-                              <form action="" class="tablaMediciones">
-                                    <h5>REGISTRO DE MEDICIONES</h5>
-                                    Temperatura de impulsión frío: <input placeholder="Cº" type="number"><br>
-                                    Temperatura de impulsión calor: <input placeholder="Cº" type="number"><br>
-                                    Temperatura de retorno: <input placeholder="Cº" type="number"><br>
-                                    Temperatura de sala: <input placeholder="Cº" type="number"><br>
-                                    Temperatura exterior: <input placeholder="Cº" type="number"><br>                         
-                              </form>
-                        </div>
-                        <div class="container consumos">
-                              <form action="" class="tablaConsumos">
-                                    <h5>CONSUMOS ELÉCTRICOS (A)</h5>
-                                    <h6>Compresor Nº1</h6>
-                                    R: <input placeholder="A" type="number"><br>
-                                    S: <input placeholder="A" type="number"><br>
-                                    T: <input placeholder="A" type="number"><br>
-                                    <p>Presión de refrigerante</p>
-                                    Baja: <input placeholder="" type="number"><br>
-                                    Alta: <input placeholder="" type="number"><br>
-                                    Tipo refrigerante: <input placeholder="" type="text"><br>
-                              </form>
-                              <h6>Compresor Nº2</h6>
-                              R: <input placeholder="" type="number"><br>
-                              S: <input placeholder="" type="number"><br>
-                              T: <input placeholder="" type="number"><br>                        
-                              <h6>Presión de refrigerante</h6>
-                              Baja: <input placeholder="" type="number"><br>
-                              Alta: <input placeholder="" type="number"><br>
-                              Tipo refrigerante: <input placeholder="" type="text"><br>
-                              Evaporador: <input placeholder="" type="number"><br>  
-                        </form>
-                        <h6>Condensador</h6><BR>
-                        R: <input placeholder="" type="number"><br>
-                        S: <input placeholder="" type="text"><br>
-                        T: <input placeholder="" type="text"><br>                            
-                  </form>
+                  <div class="consumo-caja consumo-caja2">
+                        <input type="text" class="r1">
+                        <input type="text" class="r2">
+                        <input type="text" class="r3">
                   </div>
-                        </div>
-                  </div>
-             </main>
-      </div>
-            <!--=======================FOOTER=======================-->
-             <footer>
-                   <button class="buttonPDF" onclick="generatePDF()">Guardar</button>
-            </footer>
+                  <div class="consumo-caja consumo-caja3">
+                        <input type="text" class="r1">
+                        <input type="text" class="r2">
+                        <input type="text" class="r3">
+                  </div> 
+            </div>  
+      </main>
+            <!--=======================BUTTON=======================-->
+            <button class="buttonPDF button" onclick="generatePDF()"><i class="uil uil-save"></i>Guardar</button>
             <!--=======================JAVASCRIPT=======================-->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
             <script src="html2pdf.bundle.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script>
 			function generatePDF() {
+
+                  let fecha = document. querySelector('#fecha'). value;
+                  let sucursal = document. querySelector('#cliente'). value;
+
+                  var opt = {
+                  margin:       0,
+                  filename:     sucursal + " " + fecha ,
+                  image:        { type: 'png' },
+                  jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
+                  };
 				// Choose the element that our invoice is rendered in.
 				const element = document.getElementById('invoice');
-				// Choose the element and save the PDF for our user.
-				html2pdf().from(element).save();
+                        // New Promise-based usage:
+                        html2pdf().set(opt).from(element).save();
 			}
 		</script>
 	</body>

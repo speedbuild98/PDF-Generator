@@ -1,171 +1,187 @@
-/*==================== GOOGLE FONTS ====================*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
-
-/*==================== VARIABLES CSS ====================*/
-:root {
-    --header-height: 3rem;
-
-    /*========== Colores ==========*/
-    --hue-color: 200; 
-
-    /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 100%, 40%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-
-    /*========== fuente ==========*/
-    --body-font: 'Poppins', sans-serif;
-
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
-}
-
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
-}
-
-/*==================== BASE ====================*/
-* {
+*{
+  font-family: 'Arimo', sans-serif;
   padding: 0;
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0 0 var(--header-height) 0;
-  font-family:'Roboto', sans-serif!important;
-}
-
-body input{
+input{
+  background-color: transparent;
   border: none;
-  margin: 5px 0 5px;
-  text-align: center;
-  border-radius: 7px;
-  font-weight: bolder;
-  color:#0f0f0f;
-  text-transform: uppercase;
 }
-body p{
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 500;
+
+.buttonPDF{
+  background-color: #2e6cf1;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: .15cm;
+  left: .2cm;
+  border-radius: 20px;
+  font-weight: bolder;
+  color:#fff;
+}
+
+.buttonPDF:hover{
+  background-color: #4D83F7;
+  transform: scale(1.1);
 }
 #invoice{
-  background-color:#8ecae6;
+  position: relative;
+  width: 209mm;
+  height: 296mm;
+  padding: 0;
+  margin: 0;
+  border: 1px solid red;
+  background-image: url(/informe\ aa.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 12px;
 }
 
-ul {
-  list-style: none;
+/*================= Uso interno =================*/
+
+.uso-interno{
+  z-index: 10;
+  position: absolute;
+  height: .43cm;
+  width: 2.2cm;
 }
 
-a {
-  text-decoration: none;
+#fecha{
+  top: 4.5cm;
+  right: 5.45cm;
 }
 
-/*==================== NAV ====================*/
-nav{
-  border-bottom:10px solid #00000050;
-  display:flex;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 15px;
+#hs-trabajo{
+  top: 5.1cm;
+  right: 5.45cm;
 }
 
-.titulo img{
-  margin-top:20px;
-  filter: drop-shadow(-2px 2px 5px white);
+#tecnicos{
+  top: 5.6cm;
+  right: 5.45cm;
 }
 
-.titulo{
-  font-weight: bold !important;
-  filter: drop-shadow(-2px 2px 5px white);
+#fechafin{
+  top: 4.5cm;
+  right: .9cm;
 }
 
-.titulo h1, .tablaNav{
-  margin-top:15px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: bolder;
+#hs-viaje{
+  top: 5.1cm;
+  right: .9cm;
 }
 
-.tablaNav input{
-  width: 100%;
-
+#obra{
+  top: 5.6cm;
+  right: .9cm;
 }
-.titulo input{
+
+/*================= Cliente/Sitio =================*/
+
+#cliente{
+  z-index: 10;
+  top: 3.75cm;
+  left: 3.75cm;
+  position: absolute;
+  height: .6cm;
+  width: 3.5cm;
+  background-color: transparent;
+  font-size: 15px;
   border: none;
-  margin: 5px 0 5px;
-}
-.tablaHeader{
-  margin: 20px 0px 20px;
-  padding-bottom: 15px;
-  border-bottom:10px solid #00000030;
-}
-.divHeader{
-  align-items: center;
-  text-align: center;
+  text-transform: uppercase;
 }
 
-.divMain{
-  border: 1px solid greenyellow;
-  align-items: center;
-  text-align: center;
+.razon{
+  z-index: 10;
+  position: absolute;
+  font-size: 12px;
+  top: 4.65cm;
+  left: 3.7cm;
 }
 
-.medicionesDiv{
-  border: 1px solid blue;
-  align-items: center;
-  text-align: center;
+#social{
+  left: 3.5cm;
+  top: 4.7cm;
 }
-/*==================== Tablas principales ====================*/
 
-/*==================== FOOTER ====================*/                     
+#direccion{
+  top: 5.1cm;
+  left: 2.8cm;
+}
+
+#te{
+  left: 1.65cm;
+  top: 5.55cm;
+}
+
+/*================= Equipo / Marca / Modelo / NºSerie =================*/
+
+.equipo{
+  z-index: 10;
+  top: 7.1cm;
+  position: absolute;
+  height: .5cm;
+  width: 3.5cm;
+  background-color: transparent;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#equipo{
+  left: 1.1cm;
+}
+#marca{
+  left: 5.95cm;
+}
+#modelo{
+  left: 10.7cm;
+}
+#serie{
+  left: 15.5cm;
+}
+
+/*================= Compresores =================*/
+
+/*= Consumo =*/
+.consumo-caja{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 9.19cm;
+  left: 3.05cm;
+  width: 15.55cm;
+  font-size: 12px;
+}
+
+.consumo-caja1{
+  width: 4.5cm;
+  left: 3.1cm;
+}
+
+.consumo-caja2{
+  width: 4.5cm;
+  left: 8.8cm;
+}
+
+.consumo-caja3{
+  width: 4.5cm;
+  left: 14.4cm;
+}
+
+.r1{
+  width: 1cm;
+}
+
+.r2{
+  position: absolute;
+  width: 1cm;
+  left: 1.54cm;
+}
+
+.r3{
+  position: absolute;
+  width: 1cm;
+  left: 3.2cm;
+}
