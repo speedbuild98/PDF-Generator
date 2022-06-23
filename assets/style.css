@@ -1,0 +1,365 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.buttonPDF{
+  position: static;
+  background-color: #2e6cf1;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bolder;
+  color:#fff;
+  margin-left: 1cm;
+}
+
+.buttonPDF:hover{
+  background-color: #4D83F7;
+  transform: scale(1.1);
+}
+#invoice{
+  border: 1px solid red;
+  position: relative;
+  width: 209mm;
+  height: 296mm;
+  padding: 0;
+  margin: 0;
+  /*background-image: url(/assets/informe\ aa.svg);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 12px;
+  font-family: 'Arimo', sans-serif;
+}
+
+input{
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: 'Arimo', sans-serif;
+}
+
+.titulos{
+  font-weight: 700;
+}
+
+/*================= Header =================*/
+header{
+  display: flex;
+  text-align: center;
+}
+
+#header-h1{
+  margin: 1.4cm auto;
+  font-size: .53cm;
+}
+
+#header-img{
+  width: 3.6cm;
+  position: absolute;
+  right: 1.6cm;
+  top: 1.15cm;
+}
+
+#header-cuadrado{
+  border: 2px solid #000;
+  height: 1cm;
+  width: .8cm;
+  position: absolute;
+  font-weight: 700;
+  font-size: 1cm;
+  top: 1.10cm;
+  left: 1.45cm;
+}
+
+#header-img-p{
+  position: absolute;
+  font-size: 8px;
+  right: 1.0cm;
+  top: 2.8cm;
+  font-weight: 700;
+}
+
+#header-p{
+  position: absolute;
+  font-size: 10px;
+  width: 1.7cm;
+  left: 1.1cm;
+  top: 2.3cm;
+}
+
+/*================= Cliente =================*/
+#cliente{
+  position: absolute;
+  border: 1px solid #000;
+  width: 9.3cm;
+  height: .65cm;
+  left: 1cm;
+  top: 3.6cm;
+  display: flex;
+  flex-direction: row;
+  padding-left: .2cm;
+}
+
+#cliente label{
+  font-size: 20px;
+  width:fit-content;
+}
+
+#cliente-input{
+  border: none;
+  text-transform: uppercase;
+  width: 5.9cm;
+  margin-left: .1cm;
+  padding-top: .1cm;
+}
+
+/*================= Razón social =================*/
+#razon{
+  font-size: 17px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 9.3cm;
+  height: 1.55cm;
+  left: 1cm;
+  top: 4.45cm;
+  display: flex;
+  flex-direction: column;
+  padding-left: .2cm;
+}
+
+.razon-container{
+  display: flex;
+  flex-direction: row;
+}
+
+#razon input{
+  padding-left: .1cm;
+}
+
+/*================= Uso interno =================*/
+#usoInterno{
+  position: absolute;
+  border: 2px solid #000;
+  right: 1cm;
+  top: 3.62cm;
+  width: 8.7cm;
+  height: 2.35cm;
+  display: flex;
+  flex-direction: column;
+}
+
+#usoInterno-titulo{
+  font-size: 17px;
+  border-bottom: 1px solid #000;
+  height: .55cm;
+  padding-left: .2cm;
+  padding-top: .3cm;
+}
+
+#usoInterno-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.usoInterno-container{
+  width: 4.35cm;
+  height: fit-content;
+  padding-left: .1cm;
+}
+
+#usoInterno label{
+  width: 2.175cm;
+  height: 0.783cm;
+}
+
+#usoInterno input{
+  width: 2.175cm;
+}
+
+/*================= EQUIPO =================*/
+#equipo{
+  font-size: 17px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 18.865cm;
+  height: 1.35cm;
+  left: 1cm;
+  top: 6.5cm;
+  display: flex;
+  flex-direction: row;
+}
+
+.equipo-container{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  width: 4.438cm;
+  padding-left: .2cm;
+  border-right: 1px solid #000;
+}
+
+#equipo input{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.equipo-fondo{
+  border-right: none;
+}
+
+/*================= COMPRESORES =================*/
+#compresores-titulo{
+  position: absolute;
+  left: 1cm;
+  top: 7.95cm;
+  padding-left: .3cm;
+}
+
+#compresores{
+  font-size: 15px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 18.7cm;
+  height: 5.75cm;
+  left: 1cm;
+  top: 8.5cm;
+  display: flex;
+  flex-direction: column;
+  padding-left: .2cm;
+}
+
+.consumo{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.consumo-titulo{
+  margin-top: 10px;
+}
+
+.consumo input{
+  width: 1cm;
+  padding-left: .1cm;
+  font-size: 14px;
+  border-bottom: 1px solid #000;
+}
+
+.consumo label{
+  width: max-content;
+}
+
+.consumos-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.input-consumos{
+  display: flex;
+  flex-direction: row;
+}
+
+.presiones{
+  margin-top: .3cm;
+  display: flex;
+  flex-direction: row;
+}
+
+#psi{
+  margin-left: .1cm;
+  width: 1cm;
+  border-bottom: 1px solid #000;
+}
+
+.presiones-input-container,
+.presiones-container,
+.presiones-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.presiones-input{
+  width: 2cm;
+}
+
+.presiones-input label{
+  width: 4cm;
+}
+
+.presiones-input input{
+  border-bottom: 1px solid #000;
+  width: 1cm;
+  padding-left: .1cm;
+  font-size: 14px;
+}
+
+/*================= EVAPORADOR =================*/
+#evaporador-titulo{
+  position: absolute;
+  left: 1cm;
+  top: 14.4cm;
+  padding-left: .3cm;
+}
+
+#evaporador{
+  font-size: 15px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 18.7cm;
+  height: 3.45cm;
+  left: 1cm;
+  top: 15cm;
+  display: flex;
+  flex-direction: column;
+  padding-left: .2cm;
+}
+
+/*================= CONDENSADOR =================*/
+#condensador-titulo{
+  position: absolute;
+  left: 1cm;
+  top: 18.55cm;
+  padding-left: .3cm;
+}
+
+#condensador{
+  font-size: 15px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 18.7cm;
+  height: 3.45cm;
+  left: 1cm;
+  top: 19.1cm;
+  display: flex;
+  flex-direction: column;
+  padding-left: .2cm;
+}
+
+/*================= OBSERVACIONES =================*/
+#observaciones{
+  font-size: 15px;
+  position: absolute;
+  border: 1px solid #000;
+  width: 18.7cm;
+  height: 2cm;
+  left: 1cm;
+  top: 23.25cm;
+  display: flex;
+  flex-direction: column;
+  padding-left: .2cm;
+  resize: none;
+  font-size: 13px;
+  font-family: 'Arimo', sans-serif;
+}
+#observaciones-titulo{
+  position: absolute;
+  left: 1cm;
+  top: 22.65cm;
+  padding-left: .3cm;
+}

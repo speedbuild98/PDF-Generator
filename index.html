@@ -5,9 +5,9 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="theme-color" content="#0088CC" />
-		<title>Informe Mantenimiento Aire Acondicionado - Renault</title>
+		<title>Informe Mantenimiento Aire Acondicionado</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link rel=StyleSheet href="style.css">
+            <link rel=StyleSheet href="/assets/style.css">
             <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,73 +16,239 @@
 	<body>
             <!--========================MAIN=========================-->
       <main id="invoice">
-            <!--Uso interno-->
-                  <input class="uso-interno" id="fecha" type="date">
-                  <input class="uso-interno" id="fechafin" type="date">
-                  <input class="uso-interno" id="hs-trabajo" type="number">
-                  <input class="uso-interno" id="hs-viaje" type="number">
-                  <input class="uso-interno" id="tecnicos" type="number">
-                  <input class="uso-interno" id="obra" type="text">
-            <!--Cliente/Sitio-->
-                  <select required name="cliente" id="cliente">
-                        <option value="LOCAL 1">LOCAL 1</option>
-                        <option value="LOCAL 5">LOCAL 5</option>
-                        <option value="LOCAL 9">LOCAL 9</option>
-                      </select>
-            <!--Razón social-->
-                  <input class="razon" type="text" id="social">
-                  <input class="razon" type="text" id="direccion">
-                  <input class="razon" type="number" id="te">
-            <!--Equipo-->
-                  <input type="text" class="equipo" id="equipo">
-                  <input type="text" class="equipo" id="marca">
-                  <input type="text" class="equipo" id="modelo">
-                  <input type="text" class="equipo" id="serie">
-            <!--Compresores-->
-            <!--Consumo-->
-            <div class="consumo">
-                  <div class="consumo-caja consumo-caja1">
-                        <input type="text" class="r1">
-                        <input type="text" class="r2">
-                        <input type="text" class="r3">
-                  </div>
-                  <div class="consumo-caja consumo-caja2">
-                        <input type="text" class="r1">
-                        <input type="text" class="r2">
-                        <input type="text" class="r3">
-                  </div>
-                  <div class="consumo-caja consumo-caja3">
-                        <input type="text" class="r1">
-                        <input type="text" class="r2">
-                        <input type="text" class="r3">
-                  </div> 
+            <!--========================HEADER=========================-->
+            <header>
+                  <h1 id="header-h1">INFORME MANTENIMIENTO<br/>AIRE ACONDICIONADO</h1>
+                  <img src="/assets/img/logo.png" alt="logo proima" id="header-img">
+                  <p id="header-img-p">PROYECTO - INSTALACIÓN - MANTENIMIENTO</p>
+                  <span id="header-cuadrado">X</span>
+                  <p id="header-p">Documento<br/>no válido<br/>como Factura</p>
+            </header>
+            <!--========================Cliente=========================-->
+            <div id="cliente">
+                  <label for="cliente">Cliente / Sitio:</label>
+                  <input type="text" id="cliente-input" name="cliente">
             </div>
-            <!--Firmas-->
-                        <input type="text" class="r1">
-            <!--Firmas-->
-                  <br>
-                  <img src="/firmas/firma-1.png" alt="firmas" class="firmas">
+            <!--========================Razon=========================-->
+            <div id="razon">
+                  <div class="razon-container">
+                        <label for="cliente">Razón social:</label>
+                        <input type="text" class="razon-input" name="cliente">
+                  </div>
+                  <div class="razon-container">
+                        <label for="cliente">Dirección:</label>
+                        <input type="text" class="razon-input" name="cliente">
+                  </div>
+                  <div class="razon-container">
+                        <label for="cliente">Te:</label>
+                        <input type="text" class="razon-input" name="cliente">
+                  </div>                  
+            </div>
+            <!--========================Uso interno=========================-->
+            <div id="usoInterno">
+                  <p id="usoInterno-titulo" class="titulos">USO INTERNO</p>
+                  <div id="usoInterno-div">
+                        <div class="usoInterno-container">
+                              <div class="usoInterno-container-input">
+                                    <label for="inicio">Fecha inicio:</label>
+                                    <input type="date" id="inicio" class="usoInterno-input" name="inicio">
+                              </div>
+                              <div class="usoInterno-container-input">
+                                    <label for="horas">HS. Trabajo:</label>
+                                    <input type="text" class="usoInterno-input" name="horas">
+                              </div> 
+                              <div class="usoInterno-container-input">
+                                    <label for="tecnicos">Nº Técnicos:</label>
+                                    <input type="text" class="usoInterno-input" name="tecnicos">
+                              </div>  
+                        </div>
+                        <div class="usoInterno-container">
+                              <div class="usoInterno-container-input">
+                                    <label for="inicio">Fecha fin:</label>
+                                    <input type="date" class="usoInterno-input" name="inicio">
+                              </div>
+                              <div class="usoInterno-container-input">
+                                    <label for="horas">HS. Trabajo:</label>
+                                    <input type="text" class="usoInterno-input" name="horas">
+                              </div> 
+                              <div class="usoInterno-container-input">
+                                    <label for="tecnicos">Nº Técnicos:</label>
+                                    <input type="text" class="usoInterno-input" name="tecnicos">
+                              </div>  
+                        </div>
+                  </div>
+            </div>
+            <!--========================Equipo=========================-->
+            <div id="equipo">
+                  <div class="equipo-container">
+                        <label class="titulos" for="equipo">EQUIPO:</label>
+                        <input type="text" id="equipo-input" class="equipo" name="equipo">
+                  </div>
+                  <div class="equipo-container">
+                        <label class="titulos" for="equipo">MARCA:</label>
+                        <input type="text" class="equipo" name="equipo">
+                  </div>
+                  <div class="equipo-container">
+                        <label class="titulos" for="equipo">MODELO:</label>
+                        <input type="text" class="equipo" name="equipo">
+                  </div>
+                  <div class="equipo-container equipo-fondo">
+                        <label class="titulos" for="equipo">Nº SERIE / UBICACIÓN:</label>
+                        <input type="text" class="equipo" name="equipo">
+                  </div>
+            </div>
+            <!--========================Compresores=========================-->
+            <h2 id="compresores-titulo">COMPRESORES:</h2>
+            <div id="compresores">
+                  <p class="consumo-titulo titulos">* A) Consumo Eléctrico:</p>
+                  <div class="consumo">
+                        <div class="consumos-container">
+                              <div class="input-consumos">
+                                    <label for="r">1) R</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="r">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="s">S</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="s">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="t">T</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="t">
+                              </div>
+                        </div>
+                        <div class="consumos-container">
+                              <div class="input-consumos">
+                                    <label for="r">2) R</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="r">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="s">S</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="s">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="t">T</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="t">
+                              </div>
+                        </div>
+                        <div class="consumos-container">
+                              <div class="input-consumos">
+                                    <label for="r">3) R</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="r">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="s">S</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="s">
+                              </div>
+                              <div class="input-consumos">
+                                    <label for="t">T</label>
+                                    <input maxlength="4" type="text" class="consumos-input" name="t">
+                              </div>
+                        </div>
+                  </div>
+                  <div class="presiones titulos">* B) Presiones de refrigerante (PSI)<input maxlength="4" id="psi" type="text" class="presiones-input" name="psi"></div>
+                  <div class="presiones-input-container">
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">1)Baja</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">2)Baja</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">3)Baja</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                  </div>
+                  <div class="presiones-input-container">
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">1)Alta</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">2)Alta</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                        <div class="presiones-container">
+                              <div class="presiones-input">
+                                    <label for="baja">3)Alta</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="baja">
+                              </div>
+                              <div class="presiones-input">
+                                    <label for="corte">Corte</label>
+                                    <input maxlength="4" type="text" class="presiones-input" name="corte">
+                              </div>
+                        </div>
+                  </div>
+                  <div class="presiones titulos">* C) Nivel de Aceite<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Calefactor de Cárter<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* D) Presostato de Aceite<input maxlength="4" id="psi" type="text" class="presiones-input" name="psi"></div>
+                  <div class="presiones titulos">* E) Sobrecalentamiento<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Subenfriamiento<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi"></div>
+            </div>
+            <!--========================EVAPORADOR=========================-->
+            <h2 id="evaporador-titulo">EVAPORADOR:</h2>
+            <div id="evaporador">
+                  <div class="presiones titulos">* 1) Motor:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Calefactor de Cárter:<input id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 2) Correas:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Polea:<input id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 3) Filtros:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 4) Elemento de Expansión:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi"></div>
+            </div>
+            <!--========================CONDENSADOR=========================-->
+            <h2 id="condensador-titulo">CONDENSADOR:</h2>
+            <div id="condensador">
+                  <div class="presiones titulos">* 1) Motor:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Calefactor de Cárter:<input id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 2) Bomba:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Polea:<input id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 3) Rodamientos:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi"></div>
+                  <div class="presiones titulos">* 4) Torre:<input maxlength="4" id="psi" type="text" class="aceite-input" name="psi">Drenaje de fondo:<input id="psi" type="text" class="aceite-input" name="psi">Filtro:<input id="psi" type="text" class="aceite-input" name="psi"></div>
+            </div>
+            <!--========================OBSERVACIONES=========================-->
+            <h2 id="observaciones-titulo">OBSERVACIONES:</h2>
+            <textarea name="" id="observaciones" cols="30" rows="10"></textarea>
+            <!--========================FIRMAS=========================-->
+            
+                                   <!--MAIN-END-->
       </main>
-      <select name="select" id="select">
-            <option value="1">Pepe</option>
-            <option value="2">Juan</option>
-            <option value="3">Lauta</option>
-            <option value="4">Leonel</option>
-        </select>
             <!--=======================BUTTON=======================-->
             <button class="buttonPDF button" onclick="generatePDF()"><i class="uil uil-save"></i>Guardar</button>
             <!--=======================JAVASCRIPT=======================-->
+            <script src="/assets/main.js"></script>
             <script src="html2pdf.bundle.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script>
 			function generatePDF() {
 
-                  let fecha = document. querySelector('#fecha'). value;
-                  let sucursal = document. querySelector('#cliente'). value;
-
                   var opt = {
                   margin:       0,
-                  filename:     sucursal + " " + fecha ,
+                  filename:     cliente.value + " " + inicio.value + " " + equipo.value,
                   image:        { type: 'jpeg', quality: 1 },
                   jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
                   };
@@ -90,14 +256,7 @@
 				const element = document.getElementById('invoice');
                         // New Promise-based usage:
                         html2pdf().set(opt).from(element).save();
-			}
-
-                  const $select = document.getElementById('select');
-                  const $image = document.querySelector('.firmas');
-
-                  $select.addEventListener('change', () => {
-                  $image.setAttribute('src', `/firmas/firma-${$select.value}.png`);
-                  });
+			};
 		</script>
 	</body>
 </html>
