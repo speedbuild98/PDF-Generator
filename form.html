@@ -14,7 +14,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
-	<body style="font-family: 'Arimo', sans-serif;">
+	<body class="bg-sky-200" style="font-family: 'Arimo', sans-serif;">
             <!--========================MAIN=========================-->
 <main style=
             "
@@ -78,13 +78,10 @@
             <input maxlength="6" type="text" id="t3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[17.42cm] uppercase hover:bg-sky-100">
 </main>
             <!--=======================BUTTON=======================-->
-            <button class="buttonPDF button invoce" onclick="generatePDF()"><i class="uil uil-save"></i>Guardar</button>
-            <select class="invoce" name="select" id="selectFirma">
-                  <option value="1">Lautaro</option>
-                  <option value="2">Leonel</option>
-                  <option value="3">Gallardo</option>
-                  <option value="4">Developer</option>
-              </select>
+            <div class="flex flex-row w-screen justify-center border">
+                  <button class="buttonPDF button invoce bg-green-400 px-2 py-1 rounded-xl font-black text-white mx-4 my-4 hover:bg-green-500" onclick="generatePDF()"><i class="pr-1 uil uil-save"></i>Guardar</button>
+                  <a href="/index.html" class="bg-amber-400 px-2 py-2 rounded-xl font-black text-white mx-4 my-4 hover:bg-amber-500"><i class="pr-1 uil uil-arrow"></i>Volver</a>
+            </div>
             <!--=======================JAVASCRIPT=======================-->
             <script src="html2pdf.bundle.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
