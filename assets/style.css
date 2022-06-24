@@ -1,44 +1,36 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Arimo', sans-serif;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .buttonPDF{
-  position: static;
   background-color: #2e6cf1;
   padding: 10px;
   cursor: pointer;
   border-radius: 20px;
   font-weight: bolder;
   color:#fff;
-  margin-left: 1cm;
 }
 
 .buttonPDF:hover{
   background-color: #4D83F7;
   transform: scale(1.1);
 }
-#invoice{
+#invoice{ 
   border: 1px solid red;
   position: relative;
   width: 209mm;
   height: 296mm;
   padding: 0;
-  margin: 0;
-  /*background-image: url(/assets/informe\ aa.svg);*/
+  margin:0 auto;
+  background-image: url(/assets/informe\ aa.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   font-size: 12px;
-  font-family: 'Arimo', sans-serif;
-}
-
-input{
-  border: none;
-  background-color: transparent;
-  font-size: 15px;
-  font-weight: 400;
-  font-family: 'Arimo', sans-serif;
 }
 
 .titulos{
@@ -93,7 +85,7 @@ header{
 /*================= Cliente =================*/
 #cliente{
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 9.3cm;
   height: .65cm;
   left: 1cm;
@@ -120,7 +112,7 @@ header{
 #razon{
   font-size: 17px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 9.3cm;
   height: 1.55cm;
   left: 1cm;
@@ -183,7 +175,7 @@ header{
 #equipo{
   font-size: 17px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 18.865cm;
   height: 1.35cm;
   left: 1cm;
@@ -221,7 +213,7 @@ header{
 #compresores{
   font-size: 15px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 18.7cm;
   height: 5.75cm;
   left: 1cm;
@@ -310,7 +302,7 @@ header{
 #evaporador{
   font-size: 15px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 18.7cm;
   height: 3.45cm;
   left: 1cm;
@@ -331,7 +323,7 @@ header{
 #condensador{
   font-size: 15px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 18.7cm;
   height: 3.45cm;
   left: 1cm;
@@ -345,7 +337,7 @@ header{
 #observaciones{
   font-size: 15px;
   position: absolute;
-  border: 1px solid #000;
+  border: .5px solid #000;
   width: 18.7cm;
   height: 2cm;
   left: 1cm;
@@ -362,4 +354,49 @@ header{
   left: 1cm;
   top: 22.65cm;
   padding-left: .3cm;
+}
+
+/*================= FIRMAS =================*/
+
+#firma-proima{
+  font-size: 15px;
+  position: absolute;
+  width: 8cm;
+  left: 1cm;
+  height: 3cm;
+  top: 25.35cm;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+}
+
+#firma-cliente{
+  font-size: 15px;
+  position: absolute;
+  width: 8cm;
+  right: 1cm;
+  height: 3cm;
+  top: 25.35cm;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+}
+
+#firma-proima p,
+#firma-cliente p{
+  position: absolute;
+  border-top:1px solid #000 ;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+#firma{
+  width: 4cm;
+  margin: 0 auto;
 }
