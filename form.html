@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+      <html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="theme-color" content="#0088CC" />
+		<title>Informe Mantenimiento Aire Acondicionado</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <script defer src="main.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
+	</head>
+	<body style="font-family: 'Arimo', sans-serif;">
+            <!--========================MAIN=========================-->
+<main style=
+            "
+            border: 1px solid red;
+            position: relative;
+            width: 209mm;
+            height: 296mm;
+            padding: 0;
+            margin:0 auto;
+            background-image: url(/assets/informe\ aa.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 12px;
+            " 
+            id="invoice">
+            <!--=======================CLIENTE=======================-->
+            <!--Cliente-->
+            <input type="text" id="cliente-input" class="bg-transparent text-xl absolute border-red-400 h-[.65cm] w-[6.3cm] top-[3.62cm] left-[3.8cm] uppercase hover:bg-sky-100">
+            <!--=======================RAZON=======================-->
+            <!--Razón Social-->
+            <input type="text" id="razon-social-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.5cm] top-[4.7cm] left-[3.55cm] uppercase hover:bg-sky-100">
+            <!--Dirección-->
+            <input type="text" id="direccion-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.6cm] top-[5.125cm] left-[2.85cm] uppercase hover:bg-sky-100">
+            <!--Te-->
+            <input type="text" id="te-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.6cm] top-[5.55cm] left-[1.65cm] uppercase hover:bg-sky-100">
+            <!--=======================USO INTERNO=======================-->
+            <!--Fecha inicio-->
+            <input type="date" id="fecha-inicio-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[4.55cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <!--HS Trabajo-->
+            <input type="number" id="horas-trabajo-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.08cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <!--Nº técnicos-->
+            <input type="number" id="tecnicos-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.58cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <!--Fecha fin-->
+            <input type="date" id="fecha-fin-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[4.55cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <!--Horas viaje-->
+            <input type="number" id="horas-viaje-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.08cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <!--Obra Nº-->
+            <input type="text" id="obra-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.58cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <!--=======================EQUIPO=======================-->
+            <!--Equipo-->
+            <input type="text" id="equipo-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[1.1cm] uppercase hover:bg-sky-100">
+            <!--Marca-->
+            <input type="text" id="marca-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[5.95cm] uppercase hover:bg-sky-100">
+            <!--Modelo-->
+            <input type="text" id="modelo-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[10.72cm] uppercase hover:bg-sky-100">
+            <!--Nº Serie-->
+            <input type="text" id="serie-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[15.48cm] uppercase hover:bg-sky-100">
+            <!--=======================EQUIPO=======================-->
+            <!--Consumo eléctrico 1-->
+            <input maxlength="6" type="text" id="r1-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[3.10cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[4.68cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[6.22cm] uppercase hover:bg-sky-100">
+            <!--Consumo eléctrico 2-->
+            <input maxlength="6" type="text" id="r2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[8.7cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[10.28cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[11.83cm] uppercase hover:bg-sky-100">
+            <!--Consumo eléctrico 3-->
+            <input maxlength="6" type="text" id="r3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[14.32cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[15.89cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[17.42cm] uppercase hover:bg-sky-100">
+</main>
+            <!--=======================BUTTON=======================-->
+            <button class="buttonPDF button invoce" onclick="generatePDF()"><i class="uil uil-save"></i>Guardar</button>
+            <select class="invoce" name="select" id="selectFirma">
+                  <option value="1">Lautaro</option>
+                  <option value="2">Leonel</option>
+                  <option value="3">Gallardo</option>
+                  <option value="4">Developer</option>
+              </select>
+            <!--=======================JAVASCRIPT=======================-->
+            <script src="html2pdf.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</body>
+</html>
+
