@@ -7,14 +7,15 @@ $firma.setAttribute('src', `/assets/firmas/firma-${$select.value}.png`);
 });
 
 //Imprimir PDF =============================================================
-var cliente = document.getElementById('cliente-input');
-var inicio = document.getElementById('fecha-inicio-input');
-var equipo = document.getElementById('equipo-input');
-
 function generatePDF() {
+const cliente = document.getElementById('cliente-input');
+const inicio = document.getElementById('fecha-inicio-input');
+const marca = document.getElementById('marca-input');
+const nombrePdf = cliente.value + " " + "[" + marca.value + "]" + " " + inicio.value;
+
 var opt = {
 margin:       0,
-filename:     cliente.value+" "+"["+equipo.value+"]"+" "+inicio.value,
+filename:     nombrePdf,
 image:        { type: 'jpeg', quality: 1 },
 jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
       };
@@ -25,9 +26,3 @@ jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
 };
 
 //Bóton toggle =============================================================
-
-function mostrarForm() {
-      var invoce = document.getElementById("invoce");
-      invoce.className -= " block";
-      invoce.className += " block";
-    }
