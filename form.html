@@ -14,7 +14,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-sky-200" style="font-family: 'Arimo', sans-serif;">
+	<body onload="firmar()"  class="bg-sky-200" style="font-family: 'Arimo', sans-serif;">
             <!--========================MAIN=========================-->
 <main style=
             "
@@ -32,74 +32,119 @@
             id="invoice">
             <!--=======================CLIENTE=======================-->
             <!--Cliente-->
-            <input type="text" id="cliente-input" class="bg-transparent text-xl absolute border-red-400 h-[.65cm] w-[6.3cm] top-[3.62cm] left-[3.8cm] uppercase hover:bg-sky-100">
+            <input type="text" id="cliente-input" class="bg-transparent text-xl absolute  h-[.65cm] w-[6.3cm] top-[3.62cm] left-[3.8cm] uppercase hover:bg-sky-100">
             <!--=======================RAZON=======================-->
             <!--Razón Social-->
-            <input type="text" id="razon-social-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.5cm] top-[4.7cm] left-[3.55cm] uppercase hover:bg-sky-100">
+            <input type="text" id="razon-social-input" class="bg-transparent absolute  h-[.4cm] w-[6.5cm] top-[4.7cm] left-[3.55cm] uppercase hover:bg-sky-100">
             <!--Dirección-->
-            <input type="text" id="direccion-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.6cm] top-[5.125cm] left-[2.85cm] uppercase hover:bg-sky-100">
+            <input type="text" id="direccion-input" class="bg-transparent absolute  h-[.4cm] w-[6.6cm] top-[5.125cm] left-[2.85cm] uppercase hover:bg-sky-100">
             <!--Te-->
-            <input type="text" id="te-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[6.6cm] top-[5.55cm] left-[1.65cm] uppercase hover:bg-sky-100">
+            <input type="text" id="te-input" class="bg-transparent absolute  h-[.4cm] w-[6.6cm] top-[5.55cm] left-[1.65cm] uppercase hover:bg-sky-100">
             <!--=======================USO INTERNO=======================-->
             <!--Fecha inicio-->
-            <input type="date" id="fecha-inicio-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[4.55cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <input type="date" id="fecha-inicio-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[4.55cm] left-[13.12cm] uppercase hover:bg-sky-100">
             <!--HS Trabajo-->
-            <input type="number" id="horas-trabajo-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.08cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <input type="number" id="horas-trabajo-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[5.08cm] left-[13.12cm] uppercase hover:bg-sky-100">
             <!--Nº técnicos-->
-            <input type="number" id="tecnicos-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.58cm] left-[13.12cm] uppercase hover:bg-sky-100">
+            <input type="number" id="tecnicos-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[5.58cm] left-[13.12cm] uppercase hover:bg-sky-100">
             <!--Fecha fin-->
-            <input type="date" id="fecha-fin-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[4.55cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <input type="date" id="fecha-fin-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[4.55cm] left-[17.67cm] uppercase hover:bg-sky-100">
             <!--Horas viaje-->
-            <input type="number" id="horas-viaje-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.08cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <input type="number" id="horas-viaje-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[5.08cm] left-[17.67cm] uppercase hover:bg-sky-100">
             <!--Obra Nº-->
-            <input type="text" id="obra-input" class="bg-transparent absolute border-red-400 h-[.4cm] w-[2.15cm] top-[5.58cm] left-[17.67cm] uppercase hover:bg-sky-100">
+            <input type="text" id="obra-input" class="bg-transparent absolute  h-[.4cm] w-[2.15cm] top-[5.58cm] left-[17.67cm] uppercase hover:bg-sky-100">
             <!--=======================EQUIPO=======================-->
             <!--Equipo-->
-            <input type="text" id="equipo-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[1.1cm] uppercase hover:bg-sky-100">
+            <input type="text" id="equipo-input" class="bg-transparent text-mx absolute  h-[.55cm] w-[4.3cm] top-[7.1cm] left-[1.1cm] uppercase hover:bg-sky-100">
             <!--Marca-->
-            <input type="text" id="marca-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[5.95cm] uppercase hover:bg-sky-100">
+            <input type="text" id="marca-input" class="bg-transparent text-mx absolute  h-[.55cm] w-[4.3cm] top-[7.1cm] left-[5.95cm] uppercase hover:bg-sky-100">
             <!--Modelo-->
-            <input type="text" id="modelo-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[10.72cm] uppercase hover:bg-sky-100">
+            <input type="text" id="modelo-input" class="bg-transparent text-mx absolute 
+             h-[.55cm] w-[4.3cm] top-[7.1cm] left-[10.72cm] uppercase hover:bg-sky-100">
             <!--Nº Serie-->
-            <input type="text" id="serie-input" class="bg-transparent text-mx absolute border-red-400 h-[.55cm] w-[4.3cm] top-[7.1cm] left-[15.48cm] uppercase hover:bg-sky-100">
+            <input type="text" id="serie-input" class="bg-transparent text-mx absolute  h-[.55cm] w-[4.3cm] top-[7.1cm] left-[15.48cm] uppercase hover:bg-sky-100">
             <!--=======================COMPRESORES=======================-->
             <!--Consumo eléctrico 1-->
-            <input maxlength="6" type="text" id="r1-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[3.10cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="s2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[4.68cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="t3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[6.22cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="r1-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[3.10cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[4.68cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[6.22cm] uppercase hover:bg-sky-100">
             <!--Consumo eléctrico 2-->
-            <input maxlength="6" type="text" id="r2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[8.7cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="s2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[10.28cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="t2-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[11.83cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="r2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[8.7cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[10.28cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[11.83cm] uppercase hover:bg-sky-100">
             <!--Consumo eléctrico 3-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[14.32cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="s3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[15.89cm] uppercase hover:bg-sky-100">
-            <input maxlength="6" type="text" id="t3-input" class="bg-transparent text-mx absolute border-red-400 h-[.42cm] w-[1.16cm] top-[9.2cm] left-[17.42cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="r3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[14.32cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="s3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[15.89cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="t3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.16cm] top-[9.2cm] left-[17.42cm] uppercase hover:bg-sky-100">
             <!--Presiones de refrigerante-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.15cm] left-[6.9cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="psi-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.15cm] left-[6.9cm] uppercase hover:bg-sky-100">
             <!--1)Baja-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.5cm] left-[3.55cm] uppercase hover:bg-sky-100">
-            <!--1)Baja Corte-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.5cm] left-[5.91cm] uppercase hover:bg-sky-100">
-            <!--1)Alta-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.97cm] left-[3.55cm] uppercase hover:bg-sky-100">
-            <!--1)Alta Corte-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.97cm] left-[5.91cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="baja1-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[3.55cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="baja1-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[5.91cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta1-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[3.55cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta1-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[5.91cm] uppercase hover:bg-sky-100">
             <!--2)Baja-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.5cm] left-[9.15cm] uppercase hover:bg-sky-100">
-            <!--2)Baja Corte-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.5cm] left-[11.5cm] uppercase hover:bg-sky-100">
-            <!--2)Alta-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.97cm] left-[9.15cm] uppercase hover:bg-sky-100">
-            <!--2)Alta Corte-->
-            <input maxlength="6" type="text" id="r3-input" class="bg-red-300 text-mx absolute border-red-400 h-[.42cm] w-[1.35cm] top-[10.97cm] left-[11.5cm] uppercase hover:bg-sky-100">
-
+            <input maxlength="6" type="text" id="baja2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[9.15cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="baja2-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[11.5cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta2-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[9.15cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta2-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[11.5cm] uppercase hover:bg-sky-100">
+            <!--3)Baja-->
+            <input maxlength="6" type="text" id="baja3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[14.8cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="baja3-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.5cm] left-[17.15cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta3-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[14.8cm] uppercase hover:bg-sky-100">
+            <input maxlength="6" type="text" id="alta3-corte-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[1.35cm] top-[10.97cm] left-[17.15cm] uppercase hover:bg-sky-100">
+            <!--Nivel de aceite-->
+            <input type="text" id="aceite-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.35cm] top-[11.9cm] left-[4.28cm] uppercase hover:bg-sky-100">
+            <!--Calefactor de Cárter-->
+            <input type="text" id="calefactor-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.35cm] top-[11.9cm] left-[11.15cm] uppercase hover:bg-sky-100">
+            <!--Presostato-->
+            <input type="text" id="presostato-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.05cm] top-[12.82cm] left-[5.23cm] uppercase hover:bg-sky-100">
+            <!--Presostato-->
+            <input type="text" id="sobrecalentamiento-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.05cm] top-[13.67cm] left-[5.15cm] uppercase hover:bg-sky-100">
+            <!--Subenfriamiento-->
+            <input type="text" id="subenfriamiento-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.05cm] top-[13.67cm] left-[11.35cm] uppercase hover:bg-sky-100">            
+            <!--=======================EVAPORADOR=======================-->
+            <!--Motor evaporador-->
+            <input type="text" id="motor-evaporador-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[15.5cm] left-[2.55cm] uppercase hover:bg-sky-100">
+            <!--Consumo Amp-->
+            <input type="text" id="motor-evaporador-consumo-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[10.65cm] top-[15.5cm] left-[8.85cm] uppercase hover:bg-sky-100">
+            <!--Correas-->
+            <input type="text" id="correas-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[16cm] left-[2.85cm] uppercase hover:bg-sky-100">
+            <!--Polea-->
+            <input type="text" id="polea-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[11.9cm] top-[16cm] left-[7.57cm] uppercase hover:bg-sky-100">
+            <!--Filtros-->
+            <input type="text" id="filtros-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[16.5cm] left-[2.58cm] uppercase hover:bg-sky-100">
+            <!--Elemento de expansión-->
+            <input type="text" id="elexpansion-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.2cm] top-[16.97cm] left-[5.37cm] uppercase hover:bg-sky-100">
+            <!--=======================CONDENSADOR=======================-->
+            <!--motor condensador-->
+            <input type="text" id="motor-condensador-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[19cm] left-[2.55cm] uppercase hover:bg-sky-100">
+            <!--motor consumo-->
+            <input type="text" id="motor-condensador-consumo-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[10.65cm] top-[19cm] left-[8.85cm] uppercase hover:bg-sky-100">
+            <!--motor bomba-->
+            <input type="text" id="motor-bomba-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[19.49cm] left-[2.75cm] uppercase hover:bg-sky-100">
+            <!--bomba consumo-->
+            <input type="text" id="motor-condensador-consumo-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[10.65cm] top-[19.49cm] left-[8.85cm] uppercase hover:bg-sky-100">
+            <!--rodamientos-->
+            <input type="text" id="rodamientos-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[19.97cm] left-[3.7cm] uppercase hover:bg-sky-100">
+            <!--torres-->
+            <input type="text" id="torres-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[20.42cm] left-[2.45cm] uppercase hover:bg-sky-100">
+            <!--drenaje-->
+            <input type="text" id="drenaje-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[20.42cm] left-[9cm] uppercase hover:bg-sky-100">
+            <!--filtro-->
+            <input type="text" id="filtro-input" class="inputs bg-transparent text-mx absolute  h-[.42cm] w-[3.25cm] top-[20.42cm] left-[13.35cm] uppercase hover:bg-sky-100">
+            <!--=======================OBSERVACIONES=======================-->
+            <textarea id="observaciones-input" class="inputs bg-transparent text-mx absolute h-[2.3cm] w-[19cm] top-[22cm] left-[1cm] uppercase hover:bg-sky-100" name="" cols="30" rows="10"></textarea>
+            <!--=======================FIRMA=======================-->
+            <div class="inputs text-mx absolute h-[2.7cm] w-[6cm] top-[24.5cm] left-[1.6cm] uppercase hover:bg-sky-100">
+                  <img id="firma" class="w-full" src="">
+            </div>
 </main>
             <!--=======================BUTTON=======================-->
             <div class="flex flex-row w-screen justify-center mx-4 my-4">
-                  <button class="buttonPDF button invoce bg-green-400 px-2 py-1 rounded-xl font-black text-white mx-2 hover:bg-green-500" onclick="generatePDF()"><i class="pr-1 uil uil-save"></i>Guardar</button>
-                  <a href="/index.html" class="bg-amber-400 px-2 py-2 rounded-xl font-black text-white mx-2 hover:bg-amber-500"><i class="pr-1 uil uil-arrow"></i>Volver</a>
-                  <input class="rounded-xl text-center w-[7cm] h-fit mx-2 py-2" type="text" id="nombreArchivo" placeholder="Nombre de archivo personalizado">
+                  <a href="/index.html#seleccion" class="bg-amber-400 py-2 w-1/5 text-center rounded-xl font-black text-white mx-2 hover:bg-amber-500"><i class="pr-1 uil uil-arrow-left"></i>Volver</a>
+                  <button class="buttonPDF button bg-green-400 py-1 w-1/5 rounded-xl font-black text-white mx-2 hover:bg-green-500" onclick="generatePDF()"><i class="pr-1 uil uil-save"></i>Guardar</button>
+                  <button class="bg-red-400 py-1 w-1/5 rounded-xl font-black text-white mx-2 hover:bg-red-500" onclick="test()"><i class="pr-1 uil uil-brackets-curly"></i>Test</button>
             </div>
             <!--=======================JAVASCRIPT=======================-->
             <script src="html2pdf.bundle.min.js"></script>

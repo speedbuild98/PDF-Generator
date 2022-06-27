@@ -1,17 +1,23 @@
-//Seleccón de firma =============================================================
-const $select = document.getElementById('selectFirma');
-const $firma = document.getElementById('firma');
-
-$select.addEventListener('change', () => {
-$firma.setAttribute('src', `/assets/firmas/firma-${$select.value}.png`);
-});
-
+  
 //Imprimir PDF =============================================================
+
 function generatePDF() {
-const cliente = document.getElementById('cliente-input');
-const inicio = document.getElementById('fecha-inicio-input');
-const marca = document.getElementById('marca-input');
-const nombrePdf = cliente.value + " " + "[" + marca.value + "]" + " " + inicio.value;
+var cliente = document.getElementById('cliente-input');
+var inicio = document.getElementById('fecha-inicio-input');
+var marca = document.getElementById('marca-input');
+var observaciones = document.getElementById('observaciones');
+
+const usuarios = ["41095530", "41095531", "41095532" ,"41095533"];
+var $firma = document.getElementById('firma');
+var $select = prompt("Escribe tu DNI");
+
+if (usuarios.includes($select)){
+      $firma.setAttribute('src', `/assets/firmas/${$select}.png`);
+} else {
+      return alert("USUARIO INCORRECTO");
+}
+
+var nombrePdf = cliente.value + " " + "[" + marca.value + "]" + " " + inicio.value;
 
 var opt = {
 margin:       0,
@@ -25,4 +31,7 @@ jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
       html2pdf().set(opt).from(element).save();
 };
 
-//Bóton toggle =============================================================
+//Botón test =============================================================
+function test(){
+      alert(this.observaciones.value);
+}
