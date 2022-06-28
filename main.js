@@ -5,8 +5,6 @@ function generatePDF() {
 var cliente = document.getElementById('cliente-input');
 var inicio = document.getElementById('fecha-inicio-input');
 var marca = document.getElementById('marca-input');
-var observaciones = document.getElementById('observaciones');
-
 const usuarios = ["41095530", "41095531", "41095532" ,"41095533"];
 var $firma = document.getElementById('firma');
 var $select = prompt("Escribe tu DNI");
@@ -31,7 +29,17 @@ jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
       html2pdf().set(opt).from(element).save();
 };
 
-//Botón test =============================================================
-function test(){
-      alert(this.observaciones.value);
+//Menú ===========================================================
+
+
+// set the target element that will be collapsed or expanded (eg. navbar menu)
+const targetEl = document.getElementById('mobile-menu-4');
+
+// optionally set a trigger element (eg. a button, hamburger icon)
+const triggerEl = document.getElementById('button-menu');
+
+function mostrarMenu(){
+      targetEl.classList.toggle("hidden");
 }
+
+//Botón Test ===========================================================
