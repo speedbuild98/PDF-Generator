@@ -15,7 +15,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
-	<body style="font-family: 'Arimo', sans-serif;">
+	<body style="font-family: 'Arimo', sans-serif; overflow-x: hidden;">
             <!--========================Menú=========================-->
             <nav id="navMenu" class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded fixed w-full shadow-md dark:bg-gray-800">
                   <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -49,20 +49,23 @@
                   </div>
                   </div>
                 </nav>
+            <!--========================Inicio=========================-->    
             <div id="login" class="h-screen w-screen bg-white flex flex-col justify-center">
                   <img class="mx-auto mb-10 w-1/2" src="/assets/img/logo.png" alt="">
                   <h1 class="text-blue-300 font-black text-2xl text-center mb-1">PROIMA APP</h1>
                   <a href="#seleccion" class="bg-blue-400 mx-auto text-white rounded-[40px] font-bold p-2 px-5 hover:bg-sky-500">Empezar</a>
                   <a target="_blank" href="https://devgallardo.netlify.app/" class="text-stone-300 font-black text-xs text-center w-fit mx-auto mt-14 border-b-1 hover:scale-110 hover:underline hover:text-sky-300">Coded by Gallardo</a>
             </div>
-            <div id="seleccion" class="h-screen w-screen bg-white flex flex-col justify-center">
-                        <a href="#login" class="text-center bg-red-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-red-600"><i class="uil uil-arrow-left pr-2 text-xl"></i>Volver</a>
-                        <a href="/form.html" class="flex flex-col text-center bg-green-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-grid pr-2 text-xl"></i>Ir a formulario manual</a>
-                        <a href="" class="cursor-not-allowed flex flex-col text-center bg-amber-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-amber-600"><i class="uil uil-browser pr-2 text-xl"></i>Ir a formulario simple</a>
-                        <a href="" class="cursor-not-allowed flex flex-col text-center bg-sky-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-tachometer-fast pr-2 text-xl"></i>Estados de G. E.</a>
-                        <a href="" class="cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-presentation-line pr-2 text-xl"></i>Cronograma de trabajo</a>
-                        <a href="" class="cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-chat-bubble-user pr-2 text-xl"></i>Evaluaciones de desempeño</a>
-                        <a href="" class="cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-building pr-2 text-xl"></i>Documentación</a>                                                                                            
+            <!--========================Botones=========================-->
+            <div id="seleccion" class="h-screen w-screen bg-white flex flex-col justify-center bg-sky-100 relative">
+                        <a href="#login" class="shadow-md text-center bg-red-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-red-600"><i class="uil uil-arrow-left pr-2 text-xl"></i>Volver</a>
+                        <a href="/form.html" class="shadow-md flex flex-col text-center bg-green-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-grid pr-2 text-xl"></i>Ir a formulario manual</a>
+                        <a href="#seleccion" class="shadow-md cursor-not-allowed flex flex-col text-center bg-amber-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-amber-600"><i class="uil uil-browser pr-2 text-xl"></i>Ir a formulario simple</a>
+                        <a href="#seleccion" class="shadow-md cursor-not-allowed flex flex-col text-center bg-sky-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-tachometer-fast pr-2 text-xl"></i>Estados de G. E.</a>
+                        <a href="#seleccion" class="shadow-md cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-presentation-line pr-2 text-xl"></i>Cronograma de trabajo</a>
+                        <a href="#seleccion" class="shadow-md cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-chat-bubble-user pr-2 text-xl"></i>Evaluaciones de desempeño</a>
+                        <a href="#seleccion" class="shadow-md cursor-not-allowed flex flex-col text-center bg-blue-400 mx-auto text-white rounded-[10px] font-bold p-2 px-5 mb-8 hover:bg-sky-600"><i class="uil uil-building pr-2 text-xl"></i>Documentación</a>                                                                                            
+                        <a target="_blank" href="https://devgallardo.netlify.app/" class="text-stone-400 font-black text-xs text-center w-fit right-0 left-0 mb-10 mx-auto absolute bottom-0 border-b-1 hover:scale-110 hover:underline hover:text-sky-300">Aplicación en desarrollo by Gallardo</a>
             </div>
 	</body>
 </html>

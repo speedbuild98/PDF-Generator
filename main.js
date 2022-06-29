@@ -27,6 +27,7 @@ jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
 	const element = document.getElementById('invoice');
       // New Promise-based usage:
       html2pdf().set(opt).from(element).save();
+      alert("Se va a descargar su PDF");
 };
 
 //Menú ===========================================================
